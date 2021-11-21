@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>URL Shortener</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Tangerine' rel='stylesheet'>
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <style>
+        .center {
+            padding: 60px;
+            border: 3px blue;
+            text-align: center;
+        }
+
+        h1 {
+            font-family: 'Tangerine', serif;
+            font-size: 50px;
+            text-align: center;
+        }
+
+        h2 {
+
+            font-size: 37px;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 style="color:black;" allign="center"><b>Seven URL Shortener</b></h1>
+    <div class="tabs is-centered">
+        <ul>
+            <li>
+                <a>
+                    <span class="icon is-small"><i class="fas fa-home" aria-hidden="true"></i></span>
+                    <span onclick="window.location='/'">Home</span>
+                </a>
+            </li>
+            <li>
+                <a>
+                    <span class="icon is-small"><i class="fas fa-link" aria-hidden="true"></i></span>
+                    <span>Link</span>
+                </a>
+            </li>
+            <li class="is-active">
+                <a>
+                    <span class="icon is-small"><i class="far fa-file-alt" aria-hidden="true"></i></span>
+                    <span onclick="window.location='/stats'">statistics</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <section class="section">
+        <div class="container">
+            <table class="table is-bordered is-striped is-narrow is-hoverable">
+                <thead>
+                    <tr>
+                        <th>Original URL</th>
+                        <th>Short URL</th>
+                        <th>Visits</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    {% for link in links %}
+                    <tr>
+                        <td>{{ link.original_url }}</td>
+                        <td>{{ url_for('short.redirect_to_url', short_url=link.short_url, _external=True) }}</td>
+                        <td>{{ link.visits }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </section>
+</body>
+
+</html>
