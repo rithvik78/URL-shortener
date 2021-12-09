@@ -17,6 +17,15 @@ After Shortening:
 Statistics:  
 ![](https://i.imgur.com/vjErV0M.jpg)
 
+To run locally:  
+
+```sh
+git clone https://github.com/rith-vik-7/URL-shortener.git
+cd URL-shortener/url_shortener
+python3 -m pip flask
+python3 -m pip install python-dotenv
+python3 -m pip install flask-sqlalchemy
+```
 
 To set up database locally:  
 
