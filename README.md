@@ -16,3 +16,17 @@ After Shortening:
 
 Statistics:  
 ![](https://i.imgur.com/vjErV0M.jpg)
+
+
+To set up database locally:  
+
+```sh
+python3
+```
+
+```py
+from url shortener import create_ app
+from url shortener.extensions import db
+from url shortener.models import Link
+db.create_all (app=create_app())
+```
