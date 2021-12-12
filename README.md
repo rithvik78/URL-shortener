@@ -18,4 +18,4 @@ Statistics:
 ![](https://i.imgur.com/vjErV0M.jpg)
 
 To Deploy locally:  
-- [Blog](https://rithvik78.github.io/blog/urlshortener/) [Blog](https://dev.to/rithvik78/seven-url-shortener-13n4) 
+- [Blog](https://rithvik78.github.io/blog/urlshortener/) or [Blog](https://dev.to/rithvik78/seven-url-shortener-13n4) 
